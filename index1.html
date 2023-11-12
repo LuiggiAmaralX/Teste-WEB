@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <div class="menu-icon" onclick="toggleNav()">&#9776;</div>
+
+    <div class="navigation">
+        <ul>
+            <a class="home" href="index1.html"><li>Home</li></a>
+            <!-- <a class="index.html"><li>Home</li></a> -->
+            <a href="portifolio.html"><li>Portifolio</li></a>
+            <a href="curriculo.html"><li>Currículo</li></a>
+            <a href="contato.html"><li>Contato</li></a>      
+        </ul>
+    </div>
+
+    <div class="conteudo">
+        <div class="imagem">
+            <img src="" alt="">
+        </div>
+
+        <div class="nome">
+            <p class="nomeprincipal">LUIGGI <span>AMARAL</span></p>
+            <p class="descricao">DESENVOLVEDOR EM FORMAÇÃO</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>ㅤ</p>
+    </footer>
+
+    <script>
+        function toggleNav() {
+            var navigation = document.querySelector('.navigation ul');
+            if (navigation.style.display === '' || navigation.style.display === 'flex') {
+                navigation.style.display = 'none';
+            } else {
+                navigation.style.display = 'flex';
+            }
+        }
+
+        function checkWidth() {
+            var viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+
+            if (viewportWidth < 1200) {
+                document.querySelector('.navigation ul').style.display = 'none';
+            } else {
+                document.querySelector('.navigation ul').style.display = 'flex';
+            }
+        }
+
+        window.addEventListener('resize', checkWidth);
+        checkWidth();
+    </script>
+
+</body>
+</html>
